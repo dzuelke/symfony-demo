@@ -46,7 +46,7 @@ class Post
     private $slug;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="text")
      * @Assert\NotBlank(message="post.blank_summary")
      */
     private $summary;
