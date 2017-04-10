@@ -12,7 +12,7 @@
     "scripts": {
         "postdeploy": "php bin/console doctrine:schema:create && php bin/console doctrine:fixtures:load -n",
         "test-setup": "php bin/console doctrine:schema:create && php bin/console doctrine:fixtures:load -n",
-        "test": "phpunit"
+        "test": "phpunit --tap"
     },
     "env": {
         "SYMFONY_ENV": {
