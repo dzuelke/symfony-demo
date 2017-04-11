@@ -32,7 +32,13 @@
     "environments": {
       "test": {
         "addons":[
-          "newrelic"
+          "newrelic",
+          "heroku-postgresql"
+        ],
+        "buildpacks": [
+          {
+          "url": "https://github.com/dzuelke/heroku-buildpack-php#develop"
+          }
         ]
       }
     }
