@@ -11,8 +11,8 @@
     "success_url": "/",
     "scripts": {
         "postdeploy": "php bin/console doctrine:schema:create && php bin/console doctrine:fixtures:load -n",
-        "test-setup": "php bin/console doctrine:schema:create && php bin/console doctrine:fixtures:load -n && ps ax && jobs -p | xargs kill && ps ax",
-        "test": "phpunit --tap && ps ax && jobs -p | xargs kill && ps ax"
+        "test-setup": "php bin/console doctrine:schema:create && php bin/console doctrine:fixtures:load -n; ps ax && jobs -p | xargs kill && ps ax",
+        "test": "phpunit --tap; ps ax && jobs -p | xargs kill && ps ax"
     },
     "env": {
         "SYMFONY_ENV": {
